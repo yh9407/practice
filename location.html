@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+<h1 id = "demo"></h1>
+<div id="map" style="width:500px;height:400px;"></div>
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=344927f6fdcf008e74bcb3bf9653d484"></script>
+  
+<script>
+var x = document.getElementById("demo");
+getLocation();
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+	var container = document.getElementById('map');
+		var options = {
+			center: new kakao.maps.LatLng(position.coords.latitude, position.coords.longitude),
+			level: 3
+		};
+
+		var map = new kakao.maps.Map(container, options);
+
+}
+</script>
+
+</body>
+</html>

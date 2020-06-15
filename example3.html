@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <form action="">
+    <fieldset>
+      <legend>기본정보</legend>
+
+      <label for="user_id"> 아이디 : </label>
+      <input type="id" name="user_id"><br>
+
+      <label for="user_ps"> 비밀번호 : </label>
+      <input type="password" name="user_ps"><br>
+
+      <label for="name"> 성명 : 
+      <input type="name" name="user_name" required></label><br>
+    </fieldset>
+  </form>
+
+  <form action="">
+    <fieldset>
+      <legend>세부정보</legend>
+      <label for="user_ad"> 주소 : </label>
+      <input type="address" name="user_address"><br>
+      <label for="user_adnum"> 우편변호 : </label>
+      <input type="num" name="user_adnum">
+      <label> - </label>
+      <input type="num" name="user_adnum2"><br>
+
+      <label for="user_email"> email : </label>
+      <input type="e" name="e"><br>
+
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male">남자</label>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">여자</label><br>
+
+      <label for="birthdaytime">생년월일 :</label>
+      <input type="date">
+      <br>
+      <label for="job">직업 : </label>
+      <select id="job" name="직업">
+        <option value="devel">개발자</option>
+        <option value="design">디자이너</option>
+        <option value="pub">퍼블리셔</option>
+        <option value="plan">기획자</option>
+      </select>
+      <br>
+
+      <label for="fav">관심분야 : </label>
+      <input type="checkbox" value="f-sc">
+      <label>과학 </label>
+      <input type="checkbox" value="f-art">
+      <label>미술 </label>
+      <input type="checkbox" value="f-foreign">
+      <label>외국어 </label>
+      <input type="checkbox" value="f-game">
+      <label>게임</label>
+      <br>
+      <label>기타 : </label>
+      <textarea style="text-align-last: center;" name="Html practice" rows="20" cols="40">
+    HTML 연습
+  </textarea>
+      <br>
+    </fieldset>
+    <fieldset>
+      <input type="submit" value="작성완료">
+    </fieldset>
+  </form>
+</body>
+
+</html>
